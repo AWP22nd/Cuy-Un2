@@ -5,10 +5,15 @@ body {
     padding: 0;
 }
 
+:root {
+    --main-bg-color: rgb(40, 52, 108) ;
+    --sc-bg-color: rgb(30, 19, 108);
+}
+
 .container {
     width: 100%;
     height : 100vh;
-    background-color : rgb(23, 38, 96);
+    background-color : var(--main-bg-color);
 }
 
 .wrapper {
@@ -39,7 +44,7 @@ body {
 .card {
     border: 1px solid #ccc;
     color: rgb(244, 244, 244);
-    background-color: rgb(42, 28, 104);
+    background-color: var(--sc-bg-color);
     padding: 35px;
     margin: 3px;
 }
