@@ -14,22 +14,62 @@
     }
 
     .parallax {
-        background-color: #0e508e;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
         height: 100vh;
         width: 100%;
     }
+
+    .intro {
+        background-image: url('assets/intro.jpg');
+    }
+
+    .content {
+        background-image: url('assets/content.jpg');
+    }
+
+    .footer {
+        background-image: url('assets/footer1.jpg');
+    }
+
+    .cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .title  {
+        gap: 30px;
+        font-size: 2em;
+        letter-spacing: 20px;
+        font-family: 'Courier New', Courier, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #0088ab;
+    }
+
+    .footer {
+        gap: 30px;
+        font-size: 2em;
+        letter-spacing: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #2cd8ff;
+    }
+
 </style>
 <body>
     <div class="parallax intro">
-        
+        <div class="cta">
+            <div class="cta title">Hello Skebow!</div>
+        </div>
     </div>
 
-    <div class="parallax content">
-
-    </div>
+    <div class="parallax content"></div>
 
     <div class="parallax footer">
-
+        <div class="cta">
+            <div class="cta footer">I Love Blue</div>
+        </div>
     </div>
 </body>
 </html>
