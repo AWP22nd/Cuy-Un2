@@ -1,0 +1,20 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    background-color: rgb(21, 20, 20);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
