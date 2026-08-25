@@ -19,6 +19,23 @@ body {
     flex-direction: column;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    border: none;
+    background-color: rgb(67, 100, 105);
+    color: rgb(250, 255, 254);
+    font-size: 18px;
+    padding: 8px;
+    margin-left: 6px;
+    height: 45px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
 input {
     border: none;
     background-color: rgb(144, 255, 246);
@@ -27,3 +44,4 @@ input {
     font-size: 16px;
     margin-top: 8px;
 }
+
