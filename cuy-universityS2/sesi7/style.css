@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: o;
     box-sizing: border-box;
-    background-color: rgb(21, 20, 20);
+    background-color: rgb(20, 21, 20);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -45,3 +46,8 @@ input {
     margin-top: 8px;
 }
 
+#question {
+    color: aliceblue;
+    font-size: 1.4em;
+    font-weight: 300;
+}
