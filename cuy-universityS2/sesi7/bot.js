@@ -12,5 +12,8 @@ const botSay = () => {
 q.innerHTML = botSay()[0]
 
 function botStart() {
-    console.log("bot started . . .")
+    init++
+    if (init === 1) {
+        console.log("HI BOSS")
+    }
 }
