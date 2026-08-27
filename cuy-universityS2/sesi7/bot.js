@@ -3,9 +3,13 @@ const a = document.getElementById("answer")
 
 let init = 0
 
-const botSay = () => {
+const botSay = (data) => {
     return [
-        "Hi!, I`m Skeclow. Who are you?"
+        "Hi!, I`m Skeclow. Who are you?",
+        `Hi ${data?.name}, What is your age?`,
+        `Aight you are ${data?.age}, What do you like doing? `,
+        `WOW ${data?.hobby}, it is so amazing. BTW what is your fav food?`,
+        `${data?.favFood}??? HELL YEAH, Looks delicious XD`
     ]
 }
 
@@ -14,18 +18,22 @@ q.innerHTML = botSay()[0]
 function botStart() {
     init++
     if (init === 1) {
-        console.log({name: a.value})
+        setTimeout(botDelay({name : a.value }), 100)
     } else if (init === 2) {
-        console.log({age: a.value})
+        setTimeout(botDelay({age : a.value }), 100)
     } else if (init === 3) {
-        console.log({hobby: a.value})
+        setTimeout(botDelay({ hobby : a.value}), 100)
     } else if (init === 4) {
-        console.log({favFood: a.value})
+        setTimeout(botDelay({ favFood : a.value }), 100)
     } else if (init ===5) {
         finishing()
     } else {
         botEnd()
     }
+}
+
+function botDelay(answerUser) {
+    q.innerHTML = botSay(answerUser)[init]
 }
 
 function finishing() {
