@@ -7,7 +7,7 @@ const botSay = (data) => {
     return [
         "Hi!, I`m Skeclow. Who are you?",
         `Hi ${data?.name}, What is your age?`,
-        `Aight you are ${data?.age}, What do you like doing? `,
+        `Aight, you are ${data?.age}. What do you like doing? `,
         `WOW ${data?.hobby}, it is so amazing. BTW what is your fav food?`,
         `${data?.favFood}??? HELL YEAH, Looks delicious XD`
     ]
@@ -15,16 +15,18 @@ const botSay = (data) => {
 
 q.innerHTML = botSay()[0]
 
+let usersData = []
+
 function botStart() {
     init++
     if (init === 1) {
-        setTimeout(botDelay({name : a.value }), 100)
+        botDelay({name : a.value })
     } else if (init === 2) {
-        setTimeout(botDelay({age : a.value }), 100)
+        botDelay({age : a.value })
     } else if (init === 3) {
-        setTimeout(botDelay({ hobby : a.value}), 100)
+        botDelay({ hobby : a.value})
     } else if (init === 4) {
-        setTimeout(botDelay({ favFood : a.value }), 100)
+        botDelay({ favFood : a.value })
     } else if (init ===5) {
         finishing()
     } else {
@@ -33,13 +35,19 @@ function botStart() {
 }
 
 function botDelay(answerUser) {
-    q.innerHTML = botSay(answerUser)[init]
+    console.log({usersData : usersData})
+    setTimeout (() => {
+        q.innerHTML = botSay(answerUser)[init]
+    }, [200])
+    usersData.push( a.value )
+    a.value = ""
 }
 
 function finishing() {
-    console.log("Finishing . . .")
+    q.innerHTML = `Thank you ${usersData[0]}for your time :D`
+    a.value = "Yeah, Thank you too!"
 }
 
 function botEnd() {
-    console.log("Bot end . . .")
+    window.location.reload()
 }
