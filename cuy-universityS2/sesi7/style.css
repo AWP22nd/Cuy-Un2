@@ -13,6 +13,64 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}*,
+html,
+body {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    background-color: rgb(20, 21, 20);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    background-color: rgb(67, 100, 105);
+    color: rgb(250, 255, 254);
+    font-size: 16px;
+    padding: 6px;
+    margin-left: 8px;
+    width: 55px;
+    height: 35px;
+    font-weight: 340;
+    margin-top: 8px;
+    
+}
+
+input {
+    border: none;
+    background-color: rgb(144, 255, 246);
+    color:rgb(33, 33, 33);
+    padding: 6px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+#question {
+    color: aliceblue;
+    font-size: 1.4em;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
