@@ -33,7 +33,7 @@ body {
 
 button {
     border: none;
-    background-color: rgb(67, 100, 105);
+    background-color: rgb(58, 139, 152);
     color: rgb(250, 255, 254);
     font-size: 16px;
     padding: 6px;
@@ -42,7 +42,12 @@ button {
     height: 35px;
     font-weight: 340;
     margin-top: 8px;
+}
 
+button:hover {
+    cursor: pointer;
+    background-color: rgb(17, 78, 88);
+    transition: .3s all ease-in-out;
 }
 
 input {
@@ -60,7 +65,8 @@ input {
     font-weight: 300;
 }
 
-.load {
+#load {
+    display: none;
     width: 65px;
     height: 65px;
     position: absolute;
