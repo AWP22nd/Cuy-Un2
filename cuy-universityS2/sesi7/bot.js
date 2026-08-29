@@ -44,7 +44,7 @@ function botDelay(answerUser) {
 }
 
 function finishing() {
-    q.innerHTML = `Thank you ${usersData[0]}for your time :D`
+    q.innerHTML = `Thank you ${usersData[0]}for your time :D Anytime we ${usersData[2]} together. Okayy?? see ya!`
     a.value = "Yeah, Thank you too!"
 }
 
