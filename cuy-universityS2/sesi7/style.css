@@ -19,7 +19,6 @@ body {
     align-items: center;
     min-width: 325px;
     min-height: 100vh;
-    border: 2px solid blue;
 }
 
 .content {
@@ -28,6 +27,7 @@ body {
 
 .row {
     display: flex;
+    justify-content: center;
     flex-direction: row;
 }
 
@@ -42,7 +42,7 @@ button {
     height: 35px;
     font-weight: 340;
     margin-top: 8px;
-    
+
 }
 
 input {
@@ -58,4 +58,26 @@ input {
     color: rgb(44, 44, 44);
     font-size: 1.4em;
     font-weight: 300;
+}
+
+.load {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-top: 3px solid rgba(0, 110, 110, 0.824);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 7;
+    animation: .5s spin infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
