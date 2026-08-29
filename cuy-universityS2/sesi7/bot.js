@@ -1,5 +1,7 @@
 const q = document.getElementById("question")
 const a = document.getElementById("answer")
+const load = document.getElementById("load")
+const container = document.getElementsByClassName("container")
 
 let init = 0
 
@@ -18,6 +20,7 @@ q.innerHTML = botSay()[0]
 let usersData = []
 
 function botStart() {
+    if (a.value.length < 1) return alert ("Please answer it :)")
     init++
     if (init === 1) {
         botDelay({name : a.value })
@@ -35,9 +38,13 @@ function botStart() {
 }
 
 function botDelay(answerUser) {
-    console.log({usersData : usersData})
+    // console.log({usersData : usersData})
+    container[0].style.filter = "blur(6px)"
+    load.style.display = "block"
     setTimeout (() => {
         q.innerHTML = botSay(answerUser)[init]
+        load.style.display = "none"
+        container[0].style.filter = "none"
     }, [200])
     usersData.push( a.value )
     a.value = ""
@@ -49,5 +56,6 @@ function finishing() {
 }
 
 function botEnd() {
+    alert (`Thank you ${usersData[0]}! Going back to home . . .`)
     window.location.reload()
 }
